@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 
 function Login() {
 const [store, setStore]= useState({
@@ -35,11 +35,13 @@ function handlesubmit(e){
     }catch(error){
       console.log("Error:", error);
     }
-
-   store.username = "";
-   store.password = "";
-   store.email = "";
-   store.phone = "";
+    
+    setStore({
+      username:"",
+      password:"",
+      email:"",
+      phone:""
+    })
 
 
 }
